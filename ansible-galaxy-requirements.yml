@@ -30,7 +30,7 @@ roles:
 
   - name: containers_common
     src: https://github.com/alvistack/ansible-role-containers_common
-    version: develop
+    version: 10.4.3
 
   - name: containernetworking_plugins
     src: https://github.com/alvistack/ansible-role-containernetworking_plugins

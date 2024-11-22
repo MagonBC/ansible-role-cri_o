@@ -17,20 +17,20 @@
 _kube_release: "1.22"
 
 _rpm_key:
-  - key: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+  - key: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
     fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
 _yum_repository:
   - file: "home_alvistack"
     name: "home_alvistack"
-    description: "home:alvistack (openSUSE_Tumbleweed)"
-    baseurl: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed"
+    description: "home:alvistack (openSUSE_Leap_15.5)"
+    baseurl: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5"
     enabled: true
     priority: "2"
     module_hotfixes: true
     gpgcheck: true
-    gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+    gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
     state: "present"
 
 _zypper:
@@ -38,8 +38,6 @@ _zypper:
   - { state: "latest", name: "iproute" }
   - { state: "latest", name: "iptables" }
   - { state: "latest", name: "socat" }
-  - { state: "latest", name: "crun" }
-  - { state: "latest", name: "cri-tools" }
   - { state: "present", name: "cri-o-100:{{ cri_o_version }}" }
 
 _cri_o_crio_runtime_default_runtime: "crun"
